@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Book's Books - Our Mission, Story & Values</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+    <meta name="description" content="Learn about Book's Books journey, mission to promote literacy, core values, and the team behind our dynamic library initiatives.">
+    <meta name="keywords" content="literacy mission, book charity, library foundation, reading advocacy, educational nonprofit">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <a href="homePage.html">
+                <img src="images/logo.jpg" alt="Book's Books Logo - Building libraries for children" width="60" height="60">
+            </a>
+            <h1>Book's Books</h1>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="homePage.html">Home</a></li>
+                <li><a href="aboutUs.html" class="active">About Us</a></li>
+                <li><a href="productsAndServices.html">Products & Services</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="contactUs.html">Contact Us</a></li>
+            </ul>
+        </nav>
+
+        <div class="nav-toggle" id="navToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <!-- Main content area -->
+    <main>
+        <!-- Hero Section -->
+        <section class="about-hero">
+            <div class="hero-content">
+                <h2>Our Story of Inspiring Readers</h2>
+                <p>For over a decade, we've been transforming spaces and minds through the power of books</p>
+            </div>
+        </section>
+
+        <!-- Interactive Tabs Section -->
+        <section class="tabs-section">
+            <h2>Get to Know Us</h2>
+            <div class="tabs-container">
+                <div class="tabs-header">
+                    <button class="tab-button active" data-tab="story">Our Story</button>
+                    <button class="tab-button" data-tab="mission">Our Mission</button>
+                    <button class="tab-button" data-tab="values">Core Values</button>
+                    <button class="tab-button" data-tab="team">Our Team</button>
+                </div>
+                
+                <div class="tabs-content">
+                    <!-- Story Tab -->
+                    <div class="tab-pane active" id="story">
+                        <div class="tab-content-grid">
+                            <div class="tab-text">
+                                <h3>From a Single Bookshelf to Thousands of Libraries</h3>
+                                <p>Book's Books began in 2010 when our founder, Sarah Johnson, noticed the stark difference in library resources between schools in different communities. What started as a single bookshelf donation has grown into a movement.</p>
+                                <p>Today, we've established over 500 libraries across 3 countries, donated 2 million+ books, and trained thousands of volunteers in literacy advocacy.</p>
+                                <div class="impact-stats">
+                                    <div class="stat">
+                                        <span class="stat-number" data-count="500">0</span>
+                                        <span class="stat-label">Libraries Built</span>
+                                    </div>
+                                    <div class="stat">
+                                        <span class="stat-number" data-count="2000000">0</span>
+                                        <span class="stat-label">Books Donated</span>
+                                    </div>
+                                    <div class="stat">
+                                        <span class="stat-number" data-count="50">0</span>
+                                        <span class="stat-label">Communities Served</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-image">
+                                <img src="images/our-story.jpg" alt="Our journey from small beginnings to large impact" width="400" height="300">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mission Tab -->
+                    <div class="tab-pane" id="mission">
+                        <div class="tab-content-grid">
+                            <div class="tab-text">
+                                <h3>Our Commitment to Literacy</h3>
+                                <p>We believe every child deserves access to books and the opportunity to discover the magic of reading. Our mission is threefold:</p>
+                                <ul class="mission-list">
+                                    <li><i class="fas fa-book"></i> <strong>Access:</strong> Provide books to underserved communities</li>
+                                    <li><i class="fas fa-graduation-cap"></i> <strong>Education:</strong> Train educators and volunteers in literacy programs</li>
+                                    <li><i class="fas fa-heart"></i> <strong>Inspiration:</strong> Create spaces that inspire lifelong reading habits</li>
+                                </ul>
+                                <div class="mission-vision">
+                                    <div class="vision-box">
+                                        <h4>Our Vision</h4>
+                                        <p>A world where every child has access to quality reading materials and the support to develop strong literacy skills.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-image">
+                                <img src="images/our-mission.jpg" alt="Children enjoying reading in our libraries" width="400" height="300">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Values Tab -->
+                    <div class="tab-pane" id="values">
+                        <div class="values-grid">
+                            <div class="value-card">
+                                <i class="fas fa-users"></i>
+                                <h4>Inclusivity</h4>
+                                <p>We serve all communities regardless of background, ensuring every child sees themselves in the stories we provide.</p>
+                            </div>
+                            <div class="value-card">
+                                <i class="fas fa-hands-helping"></i>
+                                <h4>Community Engagement</h4>
+                                <p>We work with local communities to create sustainable library programs that reflect their unique needs and culture.</p>
+                            </div>
+                            <div class="value-card">
+                                <i class="fas fa-book-reader"></i>
+                                <h4>Literacy Advocacy</h4>
+                                <p>We champion the importance of reading as a fundamental skill for personal growth and success.</p>
+                            </div>
+                            <div class="value-card">
+                                <i class="fas fa-leaf"></i>
+                                <h4>Sustainability</h4>
+                                <p>We create programs that communities can maintain long-term, ensuring lasting impact beyond our initial involvement.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Team Tab -->
+                    <div class="tab-pane" id="team">
+                        <div class="team-grid">
+                            <div class="team-member">
+                                <img src="images/team-sarah.jpg" alt="Sarah Johnson - Founder & CEO" width="150" height="150">
+                                <h4>Sarah Johnson</h4>
+                                <p class="team-role">Founder & CEO</p>
+                                <p>Former teacher with 15+ years experience in education and community development.</p>
+                            </div>
+                            <div class="team-member">
+                                <img src="images/team-mike.jpg" alt="Mike Chen - Operations Director" width="150" height="150">
+                                <h4>Mike Chen</h4>
+                                <p class="team-role">Operations Director</p>
+                                <p>Manages library setup projects and volunteer coordination across all regions.</p>
+                            </div>
+                            <div class="team-member">
+                                <img src="images/team-maria.jpg" alt="Maria Rodriguez - Community Outreach" width="150" height="150">
+                                <h4>Maria Rodriguez</h4>
+                                <p class="team-role">Community Outreach</p>
+                                <p>Connects with schools and communities to identify needs and build partnerships.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Accordion FAQ Section -->
+        <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-button">
+                        How do you select which communities to help?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <p>We prioritize communities based on literacy rates, access to existing library resources, and demonstrated need. Our team conducts thorough assessments and partners with local educators to ensure our efforts create maximum impact.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-button">
+                        What types of books do you accept for donations?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <p>We accept new and gently used books for all age groups, with particular need for children's books, young adult literature, and educational materials. We cannot accept books with significant damage, outdated textbooks, or encyclopedia sets.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-button">
+                        How can I volunteer with Book's Books?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <p>We offer various volunteer opportunities including book sorting, library setup, reading mentorship, and event coordination. Visit our Volunteer page or contact our team to learn about current opportunities in your area.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-button">
+                        Do you work internationally?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Yes! While we started locally, we now have projects in three countries. Our international work focuses on partnering with established local organizations to ensure cultural relevance and sustainable impact.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div>
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="homePage.html">Home</a></li>
+                    <li><a href="aboutUs.html">About Us</a></li>
+                    <li><a href="productsAndServices.html">Products & Services</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="contactUs.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div>
+                <p>&copy; 2024 Book's Books. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+  
+</body>
+</html>

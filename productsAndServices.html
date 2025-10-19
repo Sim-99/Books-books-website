@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products & Services | Book's Books - Library Solutions & Literacy Programs</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+  <meta name="description" content="Explore Book's Books comprehensive services including book donations, library solutions, and education programs for communities across South Africa.">
+  <meta name="keywords" content="book donations South Africa, library solutions, education programs, literacy programs Cape Town">
+</head>
+<body>
+<!-- HEADER -->
+  <header>
+  <div class="logo-container">
+    <a href="homePage.html">
+      <img src="images/logo.jpg" alt="Book's Books Logo - Building libraries for children" width="60" height="60">
+    </a>
+    <h1>Book's Books</h1>
+  </div>
+
+  <nav>
+    <ul>
+      <li><a href="homePage.html">Home</a></li>
+      <li><a href="aboutUs.html">About Us</a></li>
+      <li><a href="productsAndServices.html" class="active">Products & Services</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a href="contactUs.html">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <div class="nav-toggle" id="navToggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</header>
+
+<!-- MAIN CONTENT -->
+  <main>
+    <!-- Page Header -->
+    <section class="page-header">
+      <h1>Products & Services</h1>
+      <p>Comprehensive literacy solutions for communities across South Africa</p>
+    </section>
+
+    <!-- Search and Filter Section -->
+    <section class="services-controls">
+      <div class="controls-container">
+        <div class="search-box">
+          <i class="fas fa-search"></i>
+          <input type="text" id="servicesSearch" placeholder="Search services...">
+        </div>
+        
+        <div class="filter-controls">
+          <select id="serviceTypeFilter">
+            <option value="all">All Services</option>
+            <option value="donation">Book Donations</option>
+            <option value="library">Library Solutions</option>
+            <option value="education">Education Programs</option>
+          </select>
+          
+          <select id="audienceFilter">
+            <option value="all">All Audiences</option>
+            <option value="individuals">Individuals</option>
+            <option value="schools">Schools</option>
+            <option value="communities">Communities</option>
+            <option value="organizations">Organizations</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Services Sections -->
+    <section class="services-main">
+      
+      <!-- Book Donations Section -->
+      <div class="service-category" id="book-donations">
+        <div class="category-header">
+          <h2>Book Donations</h2>
+          <div class="category-stats">
+            <span class="stat">2M+ Books Donated</span>
+            <span class="stat">500+ Communities Served</span>
+          </div>
+        </div>
+        
+        <div class="services-grid">
+          <!-- Individual Book Donations -->
+          <div class="service-card" data-type="donation" data-audience="individuals">
+            <div class="service-icon">
+              <i class="fas fa-book"></i>
+            </div>
+            <h3>Individual Book Donations</h3>
+            <p>Donate your gently used books to support literacy programs in underserved communities.</p>
+            <div class="service-features">
+              <h4>What We Accept:</h4>
+              <ul>
+                <li>Children's books (all ages)</li>
+                <li>Young adult literature</li>
+                <li>Educational materials</li>
+                <li>Recent bestsellers</li>
+              </ul>
+            </div>
+            <div class="service-details">
+              <div class="detail-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Drop-off locations across Cape Town</span>
+              </div>
+              <div class="detail-item">
+                <i class="fas fa-clock"></i>
+                <span>Mon-Sat: 9AM-4PM</span>
+              </div>
+              <div class="detail-item">
+                <i class="fas fa-phone"></i>
+                <span>+27 79 812 3454</span>
+              </div>
+            </div>
+            <button class="service-btn" onclick="showInquiryModal('Individual Book Donations')">Donate Books</button>
+          </div>
+
+          <!-- Community Book Drives -->
+          <div class="service-card" data-type="donation" data-audience="communities,organizations">
+            <div class="service-icon">
+              <i class="fas fa-users"></i>
+            </div>
+            <h3>Community Book Drives</h3>
+            <p>Organize book collection events in your community, school, or workplace.</p>
+            <div class="service-features">
+              <h4>We Provide:</h4>
+              <ul>
+                <li>Collection boxes and materials</li>
+                <li>Event planning support</li>
+                <li>Volunteer coordination</li>
+                <li>Impact reporting</li>
+              </ul>
+            </div>
+            <div class="service-details">
+              <div class="detail-item">
+                <i class="fas fa-calendar"></i>
+                <span>Flexible scheduling</span>
+              </div>
+              <div class="detail-item">
+                <i class="fas fa-truck"></i>
+                <span>Pickup available for large drives</span>
+              </div>
+            </div>
+            <button class="service-btn" onclick="showInquiryModal('Community Book Drives')">Organize a Drive</button>
+          </div>
+
+          <!-- Corporate Donation Program -->
+          <div class="service-card" data-type="donation" data-audience="organizations">
+            <div class="service-icon">
+              <i class="fas fa-building"></i>
+            </div>
+            <h3>Corporate Donation Program</h3>
+            <p>Partner with us for large-scale book donations and CSR initiatives.</p>
+            <div class="service-features">
+              <h4>Benefits:</h4>
+              <ul>
+                <li>Customized donation programs</li>
+                <li>Employee engagement opportunities</li>
+                <li>Tax deduction certificates</li>
+                <li>Brand recognition</li>
+              </ul>
+            </div>
+            <div class="service-details">
+              <div class="detail-item">
+                <i class="fas fa-award"></i>
+                <span>CSI/CSR recognition</span>
+              </div>
+              <div class="detail-item">
+                <i class="fas fa-chart-line"></i>
+                <span>Impact measurement reports</span>
+              </div>
+            </div>
+            <button class="service-btn primary" onclick="showInquiryModal('Corporate Donation Program')">Partner With Us</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Library Solutions Section -->
+      <div class="service-category" id="library-solutions">
+        <div class="category-header">
+          <h2>Library Solutions</h2>
+          <div class="category-stats">
+            <span class="stat">250+ Libraries Built</span>
+            <span class="stat">9 Provinces Reached</span>
+          </div>
+        </div>
+        
+        <div class="services-grid">
+          <!-- Basic Library Setup -->
+          <div class="service-card" data-type="library" data-audience="schools,communities">
+            <div class="service-icon">
+              <i class="fas fa-book-open"></i>
+            </div>
+            <h3>Basic Library Setup</h3>
+            <p>Transform any space into a functional library with our starter package.</p>
+            <div class="service-features">
+              <h4>Includes:</h4>
+              <ul>
+                <li>500+ curated books</li>
+                <li>Basic shelving units</li>
+                <li>Library setup guide</li>
+                <li>Volunteer training session</li>
+              </ul>
+            </div>
+            <div class="service-pricing">
+              <div class="price">From R15,000</div>
+              <div class="price-note">One-time setup fee</div>
+            </div>
+            <button class="service-btn" onclick="showInquiryModal('Basic Library Setup')">Get Started</button>
+          </div>
+
+          <!-- Complete Library Transformation -->
+          <div class="service-card featured" data-type="library" data-audience="schools,organizations">
+            <div class="service-badge">Most Popular</div>
+            <div class="service-icon">
+              <i class="fas fa-university"></i>
+            </div>
+            <h3>Complete Library Transformation</h3>
+            <p>End-to-end library design and implementation for optimal learning environments.</p>
+            <div class="service-features">
+              <h4>Full Service Package:</h4>
+              <ul>
+                <li>1,000+ curated books</li>
+                <li>Custom furniture & design</li>
+                <li>Digital catalog system</li>
+                <li>Staff training program</li>
+                <li>Reading area setup</li>
+                <li>6 months support</li>
+              </ul>
+            </div>
+            <div class="service-pricing">
+              <div class="price">From R35,000</div>
+              <div class="price-note">Comprehensive package</div>
+            </div>
+            <button class="service-btn primary" onclick="showInquiryModal('Complete Library Transformation')">Transform Your Space</button>
+          </div>
+
+          <!-- Library Maintenance & Support -->
+          <div class="service-card" data-type="library" data-audience="schools,communities,organizations">
+            <div class="service-icon">
+              <i class="fas fa-tools"></i>
+            </div>
+            <h3>Library Maintenance & Support</h3>
+            <p>Ongoing support to keep your library vibrant and functional.</p>
+            <div class="service-features">
+              <h4>Services Include:</h4>
+              <ul>
+                <li>Regular book replenishment</li>
+                <li>System updates and maintenance</li>
+                <li>Staff refresher training</li>
+                <li>Collection assessment</li>
+              </ul>
+            </div>
+            <div class="service-pricing">
+              <div class="price">From R2,500/month</div>
+              <div class="price-note">Monthly subscription</div>
+            </div>
+            <button class="service-btn" onclick="showInquiryModal('Library Maintenance & Support')">Learn More</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Education Programs Section -->
+      <div class="service-category" id="education-programs">
+        <div class="category-header">
+          <h2>Education Programs</h2>
+          <div class="category-stats">
+            <span class="stat">10,000+ Volunteers Trained</span>
+            <span class="stat">50+ Schools Supported</span>
+          </div>
+        </div>
+        
+        <div class="services-grid">
+          <!-- Volunteer Training Program -->
+          <div class="service-card" data-type="education" data-audience="individuals,communities">
+            <div class="service-icon">
+              <i class="fas fa-hands-helping"></i>
+            </div>
+            <h3>Volunteer Training Program</h3>
+            <p>Comprehensive training for individuals wanting to support literacy initiatives.</p>
+            <div class="service-features">
+              <h4>Training Modules:</h4>
+              <ul>
+                <li>Library management basics</li>
+                <li>Reading mentorship techniques</li>
+                <li>Child safety protocols</li>
+                <li>Community engagement</li>
+              </ul>
+            </div>
+            <div class="service-details">
+              <div class="detail-item">
+                <i class="fas fa-certificate"></i>
+                <span>Certificate provided</span>
+              </div>
+              <div class="detail-item">
+                <i class="fas fa-clock"></i>
+                <span>Flexible scheduling</span>
+              </div>
+            </div>
+            <button class="service-btn" onclick="showInquiryModal('Volunteer Training Program')">Become a Volunteer</button>
+          </div>
+
+          <!-- Literacy Workshop Series -->
+          <div class="service-card" data-type="education" data-audience="schools,communities">
+            <div class="service-icon">
+              <i class="fas fa-chalkboard-teacher"></i>
+            </div>
+            <h3>Literacy Workshop Series</h3>
+            <p>Interactive workshops to improve reading skills and foster love for books.</p>
+            <div class="service-features">
+              <h4>Workshop Topics:</h4>
+              <ul>
+                <li>Reading comprehension</li>
+                <li>Creative storytelling</li>
+                <li>Digital literacy</li>
+                <li>Parent-child reading</li>
+              </ul>
+            </div>
+            <div class="service-pricing">
+              <div class="price">From R2,500</div>
+              <div class="price-note">Per workshop series</div>
+            </div>
+            <button class="service-btn" onclick="showInquiryModal('Literacy Workshop Series')">Schedule Workshop</button>
+          </div>
+
+          <!-- Teacher Development Program -->
+          <div class="service-card" data-type="education" data-audience="schools,organizations">
+            <div class="service-icon">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <h3>Teacher Development Program</h3>
+            <p>Professional development for educators in literacy instruction and library use.</p>
+            <div class="service-features">
+              <h4>Program Includes:</h4>
+              <ul>
+                <li>Curriculum integration</li>
+                <li>Resource utilization</li>
+                <li>Assessment strategies</li>
+                <li>Technology integration</li>
+              </ul>
+            </div>
+            <div class="service-pricing">
+              <div class="price">From R4,000</div>
+              <div class="price-note">Per teacher training</div>
+            </div>
+            <button class="service-btn primary" onclick="showInquiryModal('Teacher Development Program')">Enroll Teachers</button>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Quick Stats Section -->
+    <section class="quick-stats">
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-number">2M+</div>
+          <div class="stat-label">Books Donated</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">500+</div>
+          <div class="stat-label">Libraries Built</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">10K+</div>
+          <div class="stat-label">Volunteers Trained</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">9</div>
+          <div class="stat-label">Provinces Reached</div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Service Inquiry Modal -->
+  <div id="inquiryModal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal" onclick="closeInquiryModal()">&times;</span>
+      <h3>Service Inquiry</h3>
+      <form id="inquiryForm">
+        <div class="form-group">
+          <label for="inquiryService">Service Interested In</label>
+          <input type="text" id="inquiryService" readonly>
+        </div>
+        <div class="form-group">
+          <label for="inquiryName">Your Name *</label>
+          <input type="text" id="inquiryName" required>
+        </div>
+        <div class="form-group">
+          <label for="inquiryEmail">Email Address *</label>
+          <input type="email" id="inquiryEmail" required>
+        </div>
+        <div class="form-group">
+          <label for="inquiryPhone">Phone Number</label>
+          <input type="tel" id="inquiryPhone" placeholder="+27 79 123 4567">
+        </div>
+        <div class="form-group">
+          <label for="inquiryOrganization">Organization</label>
+          <input type="text" id="inquiryOrganization">
+        </div>
+        <div class="form-group">
+          <label for="inquiryMessage">Your Requirements</label>
+          <textarea id="inquiryMessage" rows="4" placeholder="Tell us about your needs..."></textarea>
+        </div>
+        <button type="submit" class="submit-button">Send Inquiry</button>
+      </form>
+    </div>
+  </div>
+
+ <!-- FOOTER -->
+  <footer>
+  <div class="footer-container">
+    <div>
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="homePage.html">Home</a></li>
+        <li><a href="aboutUs.html">About Us</a></li>
+        <li><a href="productsAndServices.html">Products & Services</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="contactUs.html">Contact Us</a></li>
+      </ul>
+    </div>
+    <div>
+      <p>&copy; 2024 Book's Books. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

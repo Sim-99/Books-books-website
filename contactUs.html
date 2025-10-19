@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Book's Books - Get in Touch for Donations & Volunteering</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <meta name="description" content="Contact Book's Books to donate books, volunteer, or support our library projects. Find our locations and get in touch with our team.">
+  <meta name="keywords" content="book donation contact, volunteer inquiry, library support, literacy program contact">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo-container">
+      <a href="homePage.html">
+        <img src="images/logo.jpg" alt="Book's Books Logo - Building libraries for children" width="60" height="60">
+      </a>
+      <h1>Book's Books</h1>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="homePage.html">Home</a></li>
+        <li><a href="aboutUs.html">About Us</a></li>
+        <li><a href="productsAndServices.html">Products & Services</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="contactUs.html" class="active">Contact Us</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-toggle" id="navToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <!-- Contact Hero Section -->
+    <section class="contact-hero">
+      <div class="contact-left">
+        <div class="contact-card">
+          <h2>Get in Touch with Us</h2>
+          <p>Have questions about book donations, volunteering, or our library programs? We'd love to hear from you. Fill out the form below and we'll get back to you within 24 hours.</p>
+
+          <form id="contactForm" action="#" method="post">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Full Name *</label>
+                <input type="text" id="name" name="name" placeholder="Your full name" required>
+                <div class="error-message" id="nameError"></div>
+              </div>
+              
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="+27 79 123 4567" pattern="[\+]\d{2}[\s]\d{2}[\s]\d{3}[\s]\d{4}">
+                <div class="error-message" id="phoneError"></div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" required>
+              <div class="error-message" id="emailError"></div>
+            </div>
+
+            <div class="form-group">
+              <label for="subject">Subject *</label>
+              <select id="subject" name="subject" required>
+                <option value="">Select a topic</option>
+                <option value="book-donation">Book Donation</option>
+                <option value="volunteer">Volunteer Opportunity</option>
+                <option value="library-support">Library Support</option>
+                <option value="partnership">Partnership Inquiry</option>
+                <option value="general">General Question</option>
+              </select>
+              <div class="error-message" id="subjectError"></div>
+            </div>
+
+            <div class="form-group">
+              <label for="urgency">Urgency Level</label>
+              <div class="urgency-options">
+                <label class="urgency-option">
+                  <input type="radio" name="urgency" value="low" checked>
+                  <span class="radio-custom"></span>
+                  Low
+                </label>
+                <label class="urgency-option">
+                  <input type="radio" name="urgency" value="medium">
+                  <span class="radio-custom"></span>
+                  Medium
+                </label>
+                <label class="urgency-option">
+                  <input type="radio" name="urgency" value="high">
+                  <span class="radio-custom"></span>
+                  High
+                </label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message *</label>
+              <textarea id="message" name="message" placeholder="Tell us about your inquiry, book donation, or how you'd like to help..." rows="6" required></textarea>
+              <div class="char-counter">
+                <span id="charCount">0</span>/500 characters
+              </div>
+              <div class="error-message" id="messageError"></div>
+            </div>
+
+            <div class="form-group checkbox-group">
+              <label class="checkbox-label">
+                <input type="checkbox" id="newsletter" name="newsletter">
+                <span class="checkmark"></span>
+                Subscribe to our newsletter for updates on book drives and events
+              </label>
+            </div>
+
+            <div class="form-group checkbox-group">
+              <label class="checkbox-label">
+                <input type="checkbox" id="consent" name="consent" required>
+                <span class="checkmark"></span>
+                I agree to the processing of my personal data *
+              </label>
+              <div class="error-message" id="consentError"></div>
+            </div>
+
+            <button type="submit" id="submitBtn" class="submit-button">
+              <span class="button-text">Send Message</span>
+              <div class="button-spinner" style="display: none;">
+                <div class="spinner"></div>
+              </div>
+            </button>
+          </form>
+
+          <div id="formMessage" class="form-message"></div>
+        </div>
+      </div>
+
+      <div class="contact-right">
+        <div class="contact-info">
+          <h3>Contact Information</h3>
+          
+          <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <strong>Main Office</strong>
+              <p>22 Long Street<br>Cape Town, 8001<br>South Africa</p>
+            </div>
+          </div>
+          
+          <div class="contact-item">
+            <i class="fas fa-phone"></i>
+            <div>
+              <strong>Phone</strong>
+              <p>+27 79 812 3454</p>
+            </div>
+          </div>
+          
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <strong>Email</strong>
+              <p>info@booksbooks.org.za</p>
+            </div>
+          </div>
+          
+          <div class="contact-item">
+            <i class="fas fa-clock"></i>
+            <div>
+              <strong>Office Hours</strong>
+              <p>Monday - Friday: 8AM - 5PM<br>Saturday: 9AM - 2PM</p>
+            </div>
+          </div>
+
+          <div class="social-links">
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+              <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+              <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+              <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Map Section -->
+    <section class="map-section">
+      <div class="section-header">
+        <h2>Find Our Locations</h2>
+        <p>Visit our main office or find book donation drop-off points near you</p>
+      </div>
+      
+      <div class="map-container">
+        <div id="map"></div>
+        <div class="map-controls">
+          <button id="locateMe" class="map-control-btn">
+            <i class="fas fa-location-arrow"></i>
+            Locate Me
+          </button>
+          <button id="resetMap" class="map-control-btn">
+            <i class="fas fa-sync-alt"></i>
+            Reset View
+          </button>
+        </div>
+      </div>
+      
+      <div class="locations-list">
+        <div class="location-card">
+          <h4>Main Office & Headquarters</h4>
+          <p><i class="fas fa-map-marker-alt"></i> 22 Long Street, Cape Town</p>
+          <p><i class="fas fa-clock"></i> Mon-Fri: 8AM-5PM, Sat: 9AM-2PM</p>
+          <p><i class="fas fa-phone"></i> +27 79 812 3454</p>
+        </div>
+        
+        <div class="location-card">
+          <h4>Book Donation Center - Gardens</h4>
+          <p><i class="fas fa-map-marker-alt"></i> 15 Kloof Street, Gardens, Cape Town</p>
+          <p><i class="fas fa-clock"></i> Mon-Sat: 9AM-4PM</p>
+          <p class="note">Accepts book donations only</p>
+        </div>
+        
+        <div class="location-card">
+          <h4>Community Library Hub - Khayelitsha</h4>
+          <p><i class="fas fa-map-marker-alt"></i> 7 Ntlazane Road, Khayelitsha, Cape Town</p>
+          <p><i class="fas fa-clock"></i> Tue-Sun: 8AM-6PM</p>
+          <p class="note">Library services and volunteer training</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Quick Links -->
+    <section class="faq-quicklinks">
+      <h2>Quick Answers</h2>
+      <div class="quicklinks-grid">
+        <div class="quicklink-card" onclick="showQuickAnswer('donation')">
+          <i class="fas fa-book"></i>
+          <h4>Book Donations</h4>
+          <p>Learn what books we accept and how to donate</p>
+        </div>
+        
+        <div class="quicklink-card" onclick="showQuickAnswer('volunteer')">
+          <i class="fas fa-hands-helping"></i>
+          <h4>Volunteering</h4>
+          <p>Find opportunities to help in your community</p>
+        </div>
+        
+        <div class="quicklink-card" onclick="showQuickAnswer('library')">
+          <i class="fas fa-building"></i>
+          <h4>Library Support</h4>
+          <p>Get help setting up or improving your library</p>
+        </div>
+        
+        <div class="quicklink-card" onclick="showQuickAnswer('events')">
+          <i class="fas fa-calendar-alt"></i>
+          <h4>Events & Drives</h4>
+          <p>Join upcoming book drives and literacy events</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Quick Answer Modal -->
+  <div id="quickAnswerModal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal" onclick="closeQuickAnswer()">&times;</span>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-container">
+      <div>
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="homePage.html">Home</a></li>
+          <li><a href="aboutUs.html">About Us</a></li>
+          <li><a href="productsAndServices.html">Products & Services</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="contactUs.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <p>&copy; 2024 Book's Books. All rights reserved.</p>
+        <p>22 Long Street, Cape Town, South Africa</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+  
+</body>
+</html>

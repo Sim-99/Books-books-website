@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book's Books | Inspire, Donate, Transform - Dynamic School Libraries</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+  <meta name="description" content="Book's Books inspires love of reading by creating dynamic school libraries, donating books, and empowering volunteers. Join our literacy mission today.">
+  <meta name="keywords" content="book donations, school libraries, literacy programs, volunteer opportunities, reading spaces">
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="logo-container">
+      <a href="homePage.html">
+        <img src="images/logo.jpg" alt="Book's Books Logo - Building libraries for children" width="60" height="60">
+      </a>
+      <h1>Book's Books</h1>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="homePage.html">Home</a></li>
+        <li><a href="aboutUs.html">About Us</a></li>
+        <li><a href="productsAndServices.html">Products & Services</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="contactUs.html">Contact Us</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-toggle" id="navToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="hero-left">
+        <h2>Inspire, Donate, Transform</h2>
+        <p>Creating dynamic school libraries that inspire a love of reading. We believe every child deserves access to books and the opportunity to discover the magic of reading.</p>
+        <div class="hero-buttons">
+          <button onclick="scrollToSection('donate-section')">Donate Now</button>
+          <button onclick="scrollToSection('volunteer-section')">Volunteer with Us</button>
+        </div>
+      </div>
+      <div class="hero-right">
+        <img src="images/contactus.jpg" alt="Children enjoying books in a vibrant library setting" width="500" height="400">
+      </div>
+    </section>
+
+    <!-- WHAT WE DO SECTION (CARDS) -->
+    <section class="overview">
+      <h2>What We Do</h2>
+      <div class="cards-container">
+        <div class="card">
+          <img src="images/book-donation.jpg" alt="Book donation process - sorting and distributing books to schools" width="300" height="200">
+          <h3>Book Donations</h3>
+          <p>Donate books and help schools build libraries for students of all ages. We accept new and gently used books.</p>
+        </div>
+        <div class="card">
+          <img src="images/volunteer-1.jpg" alt="Volunteers organizing book drive event" width="300" height="200">
+          <h3>Volunteer Opportunities</h3>
+          <p>Join us for events, book drives, and literacy programs in communities. Make a difference in a child's life.</p>
+        </div>
+        <div class="card">
+          <img src="images/library-setup.jpg" alt="Setting up new school library with shelves and books" width="300" height="200">
+          <h3>Library Setup & Support</h3>
+          <p>Helping schools and communities set up and maintain libraries worldwide. We provide resources and training.</p>
+        </div>
+        <div class="card">
+          <img src="images/reading-spaces.jpg" alt="Cozy reading corner with comfortable seating" width="300" height="200">
+          <h3>Reading Spaces</h3>
+          <p>Create cozy, engaging spaces for readers of all ages to explore and enjoy books. We design inspiring environments.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- IMAGE GALLERY -->
+    <section class="gallery-section">
+      <h2>Our Impact Gallery</h2>
+      <div class="gallery-container">
+        <div class="gallery-item" onclick="openLightbox('images/book-donation.jpg', 'Book donation event')">
+          <img src="images/book-donation.jpg" alt="Community book donation event" width="300" height="200">
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/volunteer-1.jpg', 'Volunteers in action')">
+          <img src="images/volunteer-1.jpg" alt="Volunteers organizing literacy program" width="300" height="200">
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/library-setup.jpg', 'New library setup')">
+          <img src="images/library-setup.jpg" alt="Newly setup school library" width="300" height="200">
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/reading-spaces.jpg', 'Reading space design')">
+          <img src="images/reading-spaces.jpg" alt="Designed reading space for children" width="300" height="200">
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS CAROUSEL -->
+    <section class="testimonials">
+      <h2>What People Say</h2>
+      <div class="testimonial-carousel">
+        <div class="testimonial-slide active">
+          <p>"Thanks to Book's Books, our school library has transformed from a dusty room into a vibrant hub of learning and imagination. Our students' reading scores have improved by 40%!"</p>
+          <span>- Mrs. Johnson, Elementary School Principal</span>
+        </div>
+        <div class="testimonial-slide">
+          <p>"Volunteering with Book's Books has been one of the most rewarding experiences of my life. Seeing children's faces light up when they receive their first book is priceless."</p>
+          <span>- Sarah M., Community Volunteer</span>
+        </div>
+        <div class="testimonial-slide">
+          <p>"As a teacher in a low-income area, I've seen firsthand how Book's Books has bridged the literacy gap. Their programs have made books accessible to children who otherwise wouldn't have them."</p>
+          <span>- Mr. Davis, 5th Grade Teacher</span>
+        </div>
+        <div class="carousel-controls">
+          <button class="carousel-prev" onclick="changeTestimonial(-1)">❮</button>
+          <button class="carousel-next" onclick="changeTestimonial(1)">❯</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEWSLETTER SIGNUP -->
+    <section class="newsletter" id="newsletter-section">
+      <h2>Subscribe to our Newsletter</h2>
+      <p>Get updates on book drives, volunteer opportunities, and literacy programs. Join our community of book lovers and change-makers.</p>
+      <form id="newsletterForm" action="#" method="post">
+        <input type="email" name="email" placeholder="Enter your email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+      <div id="newsletterMessage" class="form-message"></div>
+    </section>
+
+  </main>
+
+  <!-- LIGHTBOX MODAL -->
+  <div id="lightbox" class="lightbox">
+    <span class="close-lightbox" onclick="closeLightbox()">&times;</span>
+    <img class="lightbox-content" id="lightboxImage">
+    <div class="lightbox-caption" id="lightboxCaption"></div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-container">
+      <div>
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="homePage.html">Home</a></li>
+          <li><a href="aboutUs.html">About Us</a></li>
+          <li><a href="productsAndServices.html">Products & Services</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="contactUs.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <p>&copy; 2024 Book's Books. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

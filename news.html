@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News & Events | Book's Books - Latest Updates & Library Projects</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+  <meta name="description" content="Stay updated with Book's Books latest news, events, book drives, and library transformation stories. Join our literacy movement.">
+  <meta name="keywords" content="book drive events, library news, literacy programs, volunteer opportunities, reading events">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo-container">
+      <a href="homePage.html"><img src="images/logo.jpg" alt="Book's Books Logo - Building libraries for children" width="60" height="60"></a>
+      <h1>Book's Books</h1>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="homePage.html">Home</a></li>
+        <li><a href="aboutUs.html">About Us</a></li>
+        <li><a href="productsAndServices.html">Products & Services</a></li>
+        <li><a href="news.html" class="active">News</a></li>
+        <li><a href="contactUs.html">Contact Us</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-toggle" id="navToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <!-- Search and Filter Section -->
+    <section class="news-controls">
+      <div class="controls-container">
+        <div class="search-box">
+          <i class="fas fa-search"></i>
+          <input type="text" id="newsSearch" placeholder="Search news articles...">
+          <button onclick="searchNews()">Search</button>
+        </div>
+        
+        <div class="filter-controls">
+          <select id="categoryFilter" onchange="filterNews()">
+            <option value="all">All Categories</option>
+            <option value="events">Events</option>
+            <option value="success-stories">Success Stories</option>
+            <option value="volunteer">Volunteer</option>
+            <option value="announcements">Announcements</option>
+          </select>
+          
+          <select id="sortFilter" onchange="sortNews()">
+            <option value="newest">Newest First</option>
+            <option value="oldest">Oldest First</option>
+            <option value="popular">Most Popular</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <!-- News Grid Section -->
+    <section class="news">
+      <h2>News & Events</h2>
+      <div id="newsResults" class="news-results"></div>
+      
+      <div class="news-cards-container" id="newsContainer">
+        <!-- News cards will be loaded dynamically -->
+      </div>
+
+      <!-- Loading Indicator -->
+      <div id="loadingIndicator" class="loading-indicator">
+        <div class="spinner"></div>
+        <p>Loading more articles...</p>
+      </div>
+
+      <!-- Load More Button -->
+      <div class="load-more-container">
+        <button id="loadMoreBtn" onclick="loadMoreNews()">Load More Articles</button>
+      </div>
+    </section>
+
+    <!-- Newsletter Subscription -->
+    <section class="newsletter-cta">
+      <div class="newsletter-content">
+        <h3>Never Miss an Update</h3>
+        <p>Subscribe to get the latest news about book drives, volunteer opportunities, and library openings delivered to your inbox.</p>
+        <form id="newsletterForm" class="inline-form">
+          <input type="email" placeholder="Enter your email" required>
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-container">
+      <div>
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="homePage.html">Home</a></li>
+          <li><a href="aboutUs.html">About Us</a></li>
+          <li><a href="productsAndServices.html">Products & Services</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="contactUs.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <p>&copy; 2024 Book's Books. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  
+</body>
+</html>

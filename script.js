@@ -1,4 +1,4 @@
-// script.js - JavaScript enhancements for Book's Books website
+remove duplicate code and comments here // script.js - JavaScript enhancements for Book's Books website
 
 document.addEventListener('DOMContentLoaded', function() {
     // Mobile navigation toggle
@@ -288,11 +288,11 @@ function initializeTabs() {
         button.addEventListener('click', function() {
             const targetTab = this.getAttribute('data-tab');
             
-            
+            // Remove active class from all buttons and panes
             tabButtons.forEach(btn => btn.classList.remove('active'));
             tabPanes.forEach(pane => pane.classList.remove('active'));
             
-            
+            // Add active class to clicked button and target pane
             this.classList.add('active');
             document.getElementById(targetTab).classList.add('active');
         });
@@ -1252,6 +1252,7 @@ function updateResultsCount(count) {
     console.log(`${count} services found`);
 }
 
+// Modal Functions
 function showInquiryModal(serviceName) {
     const modal = document.getElementById('inquiryModal');
     const serviceInput = document.getElementById('inquiryService');
@@ -1265,7 +1266,7 @@ function closeInquiryModal() {
     document.getElementById('inquiryForm').reset();
 }
 
-
+// Form submission
 document.getElementById('inquiryForm').addEventListener('submit', function(e) {
     e.preventDefault();
     
@@ -1278,14 +1279,14 @@ document.getElementById('inquiryForm').addEventListener('submit', function(e) {
         message: document.getElementById('inquiryMessage').value
     };
     
- 
+    // Simulate form submission
     console.log('Service inquiry submitted:', formData);
     alert('Thank you for your inquiry! We will contact you within 24 hours.');
     
     closeInquiryModal();
 });
 
-
+// Close modal when clicking outside
 window.addEventListener('click', function(event) {
     const modal = document.getElementById('inquiryModal');
     if (event.target === modal) {
@@ -1293,13 +1294,13 @@ window.addEventListener('click', function(event) {
     }
 });
 
-
+// Keyboard navigation for accessibility
 document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape') {
         closeInquiryModal();
     }
 });
-
+// Modal Functions
 function showInquiryModal(serviceName) {
     const modal = document.getElementById('inquiryModal');
     const serviceInput = document.getElementById('inquiryService');
@@ -1307,7 +1308,7 @@ function showInquiryModal(serviceName) {
     serviceInput.value = serviceName;
     modal.style.display = 'block';
     
-    
+    // Prevent body scrolling when modal is open
     document.body.style.overflow = 'hidden';
 }
 
@@ -1315,11 +1316,11 @@ function closeInquiryModal() {
     const modal = document.getElementById('inquiryModal');
     modal.style.display = 'none';
     
-  
+    // Restore body scrolling
     document.body.style.overflow = 'auto';
 }
 
-
+// Close modal when clicking outside
 window.onclick = function(event) {
     const modal = document.getElementById('inquiryModal');
     if (event.target === modal) {
@@ -1327,11 +1328,11 @@ window.onclick = function(event) {
     }
 }
 
-
+// Form submission handler
 document.getElementById('inquiryForm').addEventListener('submit', function(e) {
     e.preventDefault();
     
-    
+    // Basic validation
     const name = document.getElementById('inquiryName').value;
     const email = document.getElementById('inquiryEmail').value;
     
@@ -1340,13 +1341,13 @@ document.getElementById('inquiryForm').addEventListener('submit', function(e) {
         return;
     }
     
-    /
+    // Here you would typically send the form data to a server
     alert('Thank you for your inquiry! We will get back to you soon.');
     closeInquiryModal();
     this.reset();
 });
 
-
+// Close modal with Escape key
 document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape') {
         closeInquiryModal();

@@ -322,48 +322,80 @@ function initializeAccordion() {
     });
 }
 
-// Animated counter for statistics
+// Working Counter Animation
 function initializeCounterAnimation() {
     const counters = document.querySelectorAll('.stat-number');
-    const speed = 200; // Lower is faster
-
+    
+    // Use Intersection Observer to trigger animation when visible
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 const counter = entry.target;
-                const target = parseInt(counter.getAttribute('data-count'));
-                animateCounter(counter, target, speed);
-                observer.unobserve(counter);
+                const target = getTargetValue(counter);
+                
+                if (target > 0) {
+                    animateCounter(counter, target, 1500);
+                    observer.unobserve(counter); // Animate only once
+                }
             }
         });
-    });
+    }, { threshold: 0.5 });
 
     counters.forEach(counter => {
         observer.observe(counter);
     });
 }
 
-function animateCounter(element, target, speed) {
-    let current = 0;
-    const increment = target / speed;
-    const timer = setInterval(() => {
-        current += increment;
-        if (current >= target) {
-            element.textContent = formatNumber(target);
-            clearInterval(timer);
+function getTargetValue(counter) {
+    // Try to get from data-count attribute first
+    const dataCount = counter.getAttribute('data-count');
+    if (dataCount && !isNaN(parseInt(dataCount))) {
+        return parseInt(dataCount);
+    }
+    
+    // Fallback based on label text
+    const label = counter.nextElementSibling?.textContent || counter.parentElement.textContent;
+    if (label.includes('Libraries')) return 500;
+    else if (label.includes('Books')) return 2000000;
+    else if (label.includes('Communities')) return 1000;
+    else if (label.includes('Volunteers')) return 10000;
+    else if (label.includes('Provinces')) return 9;
+    
+    return 0;
+}
+
+function animateCounter(element, target, duration) {
+    let start = 0;
+    const startTime = performance.now();
+    
+    function updateCounter(currentTime) {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        
+        // Easing function for smooth animation
+        const easeOut = 1 - Math.pow(1 - progress, 3);
+        
+        const currentValue = Math.floor(easeOut * target);
+        
+        element.textContent = formatNumber(currentValue);
+        
+        if (progress < 1) {
+            requestAnimationFrame(updateCounter);
         } else {
-            element.textContent = formatNumber(Math.floor(current));
+            element.textContent = formatNumber(target);
         }
-    }, 1);
+    }
+    
+    requestAnimationFrame(updateCounter);
 }
 
 function formatNumber(num) {
     if (num >= 1000000) {
-        return (num / 1000000).toFixed(1) + 'M';
+        return (num / 1000000).toFixed(1) + 'M+';
     } else if (num >= 1000) {
-        return (num / 1000).toFixed(0) + 'K';
+        return (num / 1000).toFixed(0) + '+';
     }
-    return num.toString();
+    return num.toString() + '+';
 }
 
 // Smooth scrolling for internal links
@@ -1353,4 +1385,3 @@ document.addEventListener('keydown', function(e) {
         closeInquiryModal();
     }
 });
-

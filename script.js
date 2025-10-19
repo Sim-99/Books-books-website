@@ -1,4 +1,4 @@
-remove duplicate code and comments here // script.js - JavaScript enhancements for Book's Books website
+
 
 document.addEventListener('DOMContentLoaded', function() {
     // Mobile navigation toggle
@@ -1353,3 +1353,4 @@ document.addEventListener('keydown', function(e) {
         closeInquiryModal();
     }
 });
+
